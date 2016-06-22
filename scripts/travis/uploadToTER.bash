@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ev
-
 echo "Tag: $TRAVIS_TAG";
 
 if [ -n "$TRAVIS_TAG" ] && [ -n "$TYPO3_ORG_USERNAME" ] && [ -n "$TYPO3_ORG_PASSWORD" ]; then
@@ -19,9 +17,6 @@ if [ -n "$TRAVIS_TAG" ] && [ -n "$TYPO3_ORG_USERNAME" ] && [ -n "$TYPO3_ORG_PASS
     			echo "Error while uploading to TER"
     			exit 1;
   		fi;
-	else
-  		echo "Error while waiting for other jobs"
-  		exit 2;
 	fi;
 fi;
 
