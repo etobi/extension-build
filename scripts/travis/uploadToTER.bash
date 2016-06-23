@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Tag: $TRAVIS_TAG";
-
 if [ -n "$TRAVIS_TAG" ] && [ -n "$TYPO3_ORG_USERNAME" ] && [ -n "$TYPO3_ORG_PASSWORD" ]; then
 	echo "Preparing upload of release ${TRAVIS_TAG} to TER"
 	curl -sSL https://raw.githubusercontent.com/alrra/travis-after-all/1.4.4/lib/travis-after-all.js | node
